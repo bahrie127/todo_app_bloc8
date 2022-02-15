@@ -42,6 +42,11 @@ class TodosfilterBloc extends Bloc<TodosfilterEvent, TodosfilterState> {
             return !(todo.isCancelled! || todo.isCompleted!);
         }
       }).toList();
+
+      emit(TodosfilterLoaded(
+        filteredTodos: todos,
+        todosFilter: TodosFilter.pending,
+      ));
     }
   }
 

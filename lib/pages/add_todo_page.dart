@@ -43,9 +43,9 @@ class AddTodoPage extends StatelessWidget {
               ElevatedButton(
                 onPressed: () {
                   var todo = Todo(
-                    id: controllerID.value.text,
-                    task: controllerTask.value.text,
-                    desc: controllerDesc.value.text,
+                    id: controllerID.text,
+                    task: controllerTask.text,
+                    desc: controllerDesc.text,
                   );
                   context.read<TodosBloc>().add(AddTodo(todo: todo));
                   Navigator.pop(context);

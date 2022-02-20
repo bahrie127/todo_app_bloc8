@@ -7,12 +7,7 @@ abstract class TodosfilterEvent extends Equatable {
   List<Object> get props => [];
 }
 
-class UpdateFilter extends TodosfilterEvent {
-  const UpdateFilter();
-
-  @override
-  List<Object> get props => [];
-}
+class UpdateFilter extends TodosfilterEvent {}
 
 class UpdateTodos extends TodosfilterEvent {
   final TodosFilter todosFilter;
